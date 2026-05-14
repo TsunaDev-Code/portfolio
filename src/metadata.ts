@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { defaultLocale, locales } from "./i18n/config";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://tsuna-dev.com";
 /**
  * Строит абсолютный URL с учётом префикса локали.
  * next-intl (as-needed): defaultLocale без префикса, остальные с /locale
