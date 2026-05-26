@@ -44,7 +44,7 @@ export const AboutMe = async ({
         <Image
           className={classes.photo}
           src="/about-me.png"
-          alt="About me photo"
+          alt={tAbout("title")}
           width={343}
           height={500}
           loading="lazy"

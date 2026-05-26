@@ -38,14 +38,14 @@ export default async function Home({ params }: HomeProps) {
           </h1>
           <p>{tHome("description")}</p>
           <Link href={media.vk.url} target="_blank" rel="noopener noreferrer">
-            <Button>{tHome("contactBtn")}!!</Button>
+            <Button>{tHome("contactBtn")}</Button>
           </Link>
         </div>
         <div className={classes.container}>
           <Image
             className={classes.bottomImg}
             src="/photo.png"
-            alt="My photo"
+            alt={tHome("title")}
             width={500}
             height={500}
             priority
