@@ -17,7 +17,7 @@ export default async function About({ params }: AboutProps) {
   setRequestLocale(locale);
 
   const tHeader = await getTranslations("Header");
-  const tAbout = await getTranslations("AboutSection");
+  const tAbout = await getTranslations("AboutMe");
   const tSkills = await getTranslations("Skills");
   const skillsTitle: { id: SkillId; title: string }[] = tSkills.raw("skills");
   const facts: { id: string; fact: { text: string; color?: true }[] }[] =
@@ -76,6 +76,4 @@ export default async function About({ params }: AboutProps) {
   );
 }
 
-export async function generateMetadata() {
-  return createI18nMetadata("AboutSection", routes.about);
-}
+export const generateMetadata = createI18nMetadata("AboutMe", routes.about);

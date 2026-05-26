@@ -1,19 +1,36 @@
 {
   "Home": {
-    "title": "Tsyganova Anna is a",
+    "title": "Anna Tsyganova | Frontend Developer",
+    "subTitle": "Tsyganova Anna is a ",
     "colorTitle": "front-end developer",
-    "description": "I craft responsive websites where technologies meet creativity",
+    "description": "I develop responsive web solutions that blend technology with creative design, empowering your business to grow in the digital landscape.",
     "contactBtn": "Contact me",
-    "keywords": ["portfolio", "about me", "skills"]
+    "keywords": [
+      "frontend developer",
+      "portfolio",
+      "React developer",
+      "Vue.js web development",
+      "frontend portfolio",
+      "remote frontend engineer",
+      "frontend portfolio"
+    ]
   },
-  "AboutSection": {
+  "AboutMe": {
+    "title": "About Me | Anna Tsyganova — Frontend Developer",
     "subTitle": "Who I am?",
     "info": [
       "Hello, i’m Tsyganova Anna!",
       "I’m a front-end developer based in Petrozavodsk, Russia. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.",
       "Transforming my creativity and knowledge into a websites has been my passion for over a three year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks."
     ],
-    "keywords": ["portfolio", "about me", "skills"],
+    "description": "My background, tech stack, and development approach. Specializing in React, Vue.js, and web performance. Open to remote & freelance work.",
+    "keywords": [
+      "frontend developer experience",
+      "web developer bio",
+      "React specialist background",
+      "freelance developer",
+      "remote web developer"
+    ],
     "readMoreBtn": "Read more",
     "my-fun-facts": "my-fun-facts",
     "facts": [
@@ -60,6 +77,7 @@
     ]
   },
   "Projects": {
+    "title": "Projects | Web Developer Portfolio — React, Vue.js",
     "subTitle": "List of my projects",
     "complete-apps": "complete-apps",
     "small-apps": "small-apps",
@@ -68,7 +86,14 @@
       "git": "GitHub",
       "demo": "Demo"
     },
-    "keywords": ["portfolio", "projects", "works"],
+    "description": "Frontend portfolio: responsive sites, SPAs & web apps. Stack: React, Vue.js, TypeScript. View live demos & source code.",
+    "keywords": [
+      "web development portfolio",
+      "React project examples",
+      "Vue.js case projects",
+      "frontend projects",
+      "web apps showcase"
+    ],
     "portfolio": {
       "title": "Portfolio",
       "description": "You're using it right now"
@@ -115,11 +140,19 @@
     ]
   },
   "Contacts": {
+    "title": "Contact | Hire Frontend Developer for Web Projects",
     "subTitle": "Who I am?",
-    "title": "Message me here",
+    "contactTitle": "Message me here",
     "info": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
     "allMedia": "all-media",
-    "keywords": ["portfolio", "contacts", "get in touch"]
+    "description": "Ready to discuss a project? Message me on Telegram, VK, or email. Open to freelance work and long-term collaborations.",
+    "keywords": [
+      "contact frontend developer",
+      "hire web developer",
+      "freelance developer contact",
+      "web development collaboration",
+      "remote frontend hire"
+    ]
   },
   "Header": {
     "home": "home",

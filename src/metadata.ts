@@ -5,11 +5,9 @@ import { defaultLocale, locales } from "./i18n/config";
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://tsuna-dev.com";
 /**
  * Строит абсолютный URL с учётом префикса локали.
- * next-intl (as-needed): defaultLocale без префикса, остальные с /locale
  */
 const buildUrl = (locale: string, path = "/"): string => {
-  const prefix = locale === defaultLocale ? "" : `/${locale}`;
-  return `${BASE_URL}${prefix}${path}`;
+  return `${BASE_URL}/${locale}${path}`;
 };
 
 export type PageMetadataInput = {

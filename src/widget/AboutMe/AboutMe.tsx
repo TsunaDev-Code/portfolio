@@ -20,7 +20,7 @@ export const AboutMe = async ({
   showReadMore = true,
 }: AboutMeProps) => {
   const tTitle = await getTranslations("Header");
-  const tAbout = await getTranslations("AboutSection");
+  const tAbout = await getTranslations("AboutMe");
   const info: string[] = tAbout.raw("info");
 
   return (

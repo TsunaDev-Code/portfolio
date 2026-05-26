@@ -32,6 +32,4 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
   );
 }
 
-export async function generateMetadata() {
-  return createI18nMetadata("Contacts", routes.contacts);
-}
+export const generateMetadata = createI18nMetadata("Contacts", routes.contacts);

@@ -28,7 +28,7 @@ export const Contacts = async ({
     >
       <p className={classes.contactInfo}>{info}</p>
       <div className={classes.contacts}>
-        <h6>{tContacts("title")}</h6>
+        <h6>{tContacts("contactTitle")}</h6>
         {contactLinks.map((item) => {
           const Icon = media[item].icon;
           if (!Icon) return null;

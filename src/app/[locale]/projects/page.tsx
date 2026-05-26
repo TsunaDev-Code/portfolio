@@ -72,6 +72,4 @@ export default async function Projects({ params }: ProjectsProps) {
   );
 }
 
-export async function generateMetadata() {
-  return createI18nMetadata("Projects", routes.projects);
-}
+export const generateMetadata = createI18nMetadata("Projects", routes.projects);

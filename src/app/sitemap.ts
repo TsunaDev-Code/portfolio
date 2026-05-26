@@ -13,8 +13,7 @@ const getChangeFrequency = (
 
 const buildUrl = (locale: string, route: string): string => {
   const path = route === routes.root ? "" : route;
-  const prefix = locale === defaultLocale ? "" : `/${locale}`;
-  return `${BASE_URL}${prefix}${path}`;
+  return `${BASE_URL}/${locale}${path}`;
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {

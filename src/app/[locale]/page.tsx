@@ -34,7 +34,7 @@ export default async function Home({ params }: HomeProps) {
       <section className={classes.mainSection}>
         <div className={classes.info}>
           <h1>
-            {tHome("title")} <span>{tHome("colorTitle")}</span>
+            {tHome("subTitle")} <span>{tHome("colorTitle")}</span>
           </h1>
           <p>{tHome("description")}</p>
           <Link href={media.vk.url} target="_blank" rel="noopener noreferrer">
@@ -107,6 +107,4 @@ export default async function Home({ params }: HomeProps) {
   );
 }
 
-export async function generateMetadata() {
-  return createI18nMetadata("Home", routes.root);
-}
+export const generateMetadata = createI18nMetadata("Home", routes.root);
