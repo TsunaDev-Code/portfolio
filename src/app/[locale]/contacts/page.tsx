@@ -22,6 +22,7 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
         preTitle="/"
         subTitle={tContacts("subTitle")}
         showLine={false}
+        titleTag="h1"
       />
       <Section title={tContacts("allMedia")} showLine={false}>
         <div className={classes.allMedia}>

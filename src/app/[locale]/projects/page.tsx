@@ -53,6 +53,7 @@ export default async function Projects({ params }: ProjectsProps) {
   return (
     <Section
       title={tHeader("projects")}
+      titleTag="h1"
       preTitle="/"
       subTitle={tProjects("subTitle")}
       showLine={false}
