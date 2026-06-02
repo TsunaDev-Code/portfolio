@@ -19,8 +19,8 @@ export interface SocialLink {
 
 export const media: Record<MediaKey, SocialLink> = {
   git: {
-    url: "https://github.com/Tsuna08",
-    title: "Tsuna08",
+    url: "https://github.com/TsunaDev-Code",
+    title: "TsunaDev",
     icon: Git,
   },
   telegram: {

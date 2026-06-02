@@ -1,8 +1,8 @@
 {
   "Home": {
-    "title": "Anna Tsyganova | Frontend Developer",
+    "title": "Anna Tsyganova | TsunaDev — Frontend Developer",
     "subTitle": "Tsyganova Anna is a ",
-    "colorTitle": "front-end developer",
+    "colorTitle": "frontend developer",
     "description": "I develop responsive web solutions that blend technology with creative design, empowering your business to grow in the digital landscape.",
     "contactBtn": "Contact me",
     "keywords": [
@@ -16,11 +16,11 @@
     ]
   },
   "AboutMe": {
-    "title": "About Me | Anna Tsyganova — Frontend Developer",
+    "title": "About Me | TsunaDev — Frontend Developer",
     "subTitle": "Who I am?",
     "info": [
       "Hello, i’m Tsyganova Anna!",
-      "I’m a front-end developer based in Petrozavodsk, Russia. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.",
+      "I’m a frontend developer based in Petrozavodsk, Russia. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.",
       "Transforming my creativity and knowledge into a websites has been my passion for over a three year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks."
     ],
     "description": "My background, tech stack, and development approach. Specializing in React, Vue.js, and web performance. Open to remote & freelance work.",
@@ -77,14 +77,14 @@
     ]
   },
   "Projects": {
-    "title": "Projects | Web Developer Portfolio — React, Vue.js",
+    "title": "Projects | TsunaDev — Frontend Developer",
     "subTitle": "List of my projects",
     "complete-apps": "complete-apps",
     "small-apps": "small-apps",
     "viewAll": "View all",
     "buttons": {
       "git": "GitHub",
-      "demo": "Demo"
+      "project": "Project"
     },
     "description": "Frontend portfolio: responsive sites, SPAs & web apps. Stack: React, Vue.js, TypeScript. View live demos & source code.",
     "keywords": [
@@ -140,12 +140,12 @@
     ]
   },
   "Contacts": {
-    "title": "Contact | Hire Frontend Developer for Web Projects",
+    "title": "Contact | TsunaDev — Frontend Developer",
     "subTitle": "Who I am?",
     "contactTitle": "Message me here",
     "info": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
     "allMedia": "all-media",
-    "description": "Ready to discuss a project? Message me on Telegram, VK, or email. Open to freelance work and long-term collaborations.",
+    "description": "Ready to discuss a project? Message me on Telegram, VK, or Email. Open to freelance work and long-term collaborations.",
     "keywords": [
       "contact frontend developer",
       "hire web developer",
@@ -153,6 +153,20 @@
       "web development collaboration",
       "remote frontend hire"
     ]
+  },
+  "NotFound": {
+    "title": "Page not found | TsunaDev — Frontend Developer",
+    "description": "Page not found",
+    "backHome": "Back to home"
+  },
+  "Privacy": {
+    "title": "Privacy Policy | TsunaDev — Frontend Developer",
+    "subTitle": "Privacy Policy",
+    "paragraph1": "I respect your privacy. This policy explains what information may be collected and how it is used when interacting with this site.",
+    "paragraph2": "The site may collect technical data (for example, visit metrics, device type, browser) to improve quality and performance. Personal data is not shared with third parties without your consent, except as required by law.",
+    "paragraph3": "If you have questions about data processing or want to request deletion, please contact me via the contacts page.",
+    "description": "Information about privacy policy and data handling",
+    "keywords": ["privacy policy", "data processing", "privacy"]
   },
   "Header": {
     "home": "home",
@@ -165,10 +179,6 @@
   "Footer": {
     "media": "Media",
     "madeBy": "Made by TsunaDev",
-    "description": "Front-end developer"
-  },
-  "NotFound": {
-    "description": "Page not found",
-    "backHome": "Back to home"
+    "description": "Frontend developer"
   }
 }

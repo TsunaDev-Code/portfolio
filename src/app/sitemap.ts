@@ -2,7 +2,7 @@ import { routes } from "@/src/constants/routes";
 import { defaultLocale, locales } from "@/src/i18n/config";
 import { MetadataRoute } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://tsuna-dev.com";
+const BASE_URL = process.env.SITE_URL;
 
 const getChangeFrequency = (
   route: string,
