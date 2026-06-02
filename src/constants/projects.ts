@@ -8,7 +8,7 @@ export type AppsKey =
   | "calendar"
   | "myCharity"
   | "petsShop";
-export type ButtonKey = "git" | "demo";
+export type ButtonKey = "git" | "project";
 
 export interface AppsContent {
   technologies: string[];

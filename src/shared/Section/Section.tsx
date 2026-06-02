@@ -9,6 +9,7 @@ interface SectionProps {
   showLine?: boolean;
   subTitle?: string;
   buttonsInTitle?: ReactNode;
+  titleTag?: "h1" | "h2" | "h3";
 }
 
 export const Section = ({
@@ -18,6 +19,7 @@ export const Section = ({
   subTitle,
   children,
   buttonsInTitle,
+  titleTag = "h2",
 }: SectionProps) => {
   return (
     <section className={classes.section}>
@@ -27,6 +29,7 @@ export const Section = ({
         subTitle={subTitle}
         showLine={showLine}
         buttons={buttonsInTitle}
+        titleTag={titleTag}
       />
       <div className={classes.context}>{children}</div>
     </section>

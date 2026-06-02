@@ -30,6 +30,7 @@ export default async function About({ params }: AboutProps) {
         subTitle={tAbout("subTitle")}
         showLine={false}
         showReadMore={false}
+        titleTag="h1"
       />
       <Section title={tHeader("skills")} showLine={false}>
         <div className={classes.skills}>

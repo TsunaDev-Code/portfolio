@@ -1,12 +1,14 @@
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { routes } from "./constants/routes";
 import { defaultLocale, locales } from "./i18n/config";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://tsuna-dev.com";
+const BASE_URL = process.env.SITE_URL;
 /**
  * Строит абсолютный URL с учётом префикса локали.
  */
-const buildUrl = (locale: string, path = "/"): string => {
+const buildUrl = (locale: string, route: string): string => {
+  const path = route === routes.root ? "" : route;
   return `${BASE_URL}/${locale}${path}`;
 };
 
@@ -87,7 +89,7 @@ export function createI18nMetadata(namespace: string, path: string) {
       path,
       title: t("title"),
       description: t("description"),
-      keywords: [t("keywords")].flat(),
+      keywords: t.raw("keywords"),
     });
   };
 }

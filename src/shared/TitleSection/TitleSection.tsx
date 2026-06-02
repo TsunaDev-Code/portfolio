@@ -8,6 +8,7 @@ interface TitleSectionProps {
   showLine?: boolean;
   subTitle?: string;
   buttons?: ReactNode;
+  titleTag?: "h1" | "h2" | "h3";
 }
 
 export const TitleSection = ({
@@ -16,12 +17,13 @@ export const TitleSection = ({
   showLine = true,
   subTitle,
   buttons,
+  titleTag = "h2",
 }: TitleSectionProps) => {
   return (
     <div className={classes.section}>
       <div className={classes.titleAndButton}>
         <div className={classes.title}>
-          <Title title={title} preTitle={preTitle} />
+          <Title title={title} preTitle={preTitle} titleTag={titleTag} />
           {showLine && <div className={classes.line} />}
         </div>
         {buttons && <>{buttons}</>}

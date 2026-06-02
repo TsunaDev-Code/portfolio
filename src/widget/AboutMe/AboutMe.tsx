@@ -11,6 +11,7 @@ interface AboutMeProps {
   showLine?: boolean;
   subTitle?: string;
   showReadMore?: boolean;
+  titleTag?: "h1" | "h2" | "h3";
 }
 
 export const AboutMe = async ({
@@ -18,6 +19,7 @@ export const AboutMe = async ({
   subTitle,
   showLine = true,
   showReadMore = true,
+  titleTag = "h2",
 }: AboutMeProps) => {
   const tTitle = await getTranslations("Header");
   const tAbout = await getTranslations("AboutMe");
@@ -29,6 +31,7 @@ export const AboutMe = async ({
       preTitle={preTitle}
       subTitle={subTitle}
       showLine={showLine}
+      titleTag={titleTag}
     >
       <div className={classes.info}>
         {info.map((item) => (
