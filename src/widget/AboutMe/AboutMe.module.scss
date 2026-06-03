@@ -6,8 +6,18 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   max-width: 515px;
+  color: var(--secondary-color);
+  @include between($breakpoint-md, $breakpoint-lg) {
+    margin-top: -1rem;
+  }
+  @include between($breakpoint-lg, $breakpoint-xxl) {
+    margin-top: -3rem;
+  }
+  @include xxl {
+    margin-top: -5rem;
+  }
   @include xxxl {
     max-width: 50vw;
   }
@@ -20,6 +30,15 @@
   position: relative;
   display: flex;
   justify-content: center;
+  @include between($breakpoint-md, $breakpoint-lg) {
+    margin-top: -2rem;
+  }
+  @include between($breakpoint-lg, $breakpoint-xxl) {
+    margin-top: -4rem;
+  }
+  @include xxl {
+    margin-top: -5rem;
+  }
 }
 
 .photo {
@@ -27,11 +46,13 @@
   position: relative;
   display: block;
   height: fit-content;
-  @include lg {
-    width: 357px;
+  @include between($breakpoint-md, $breakpoint-lg) {
+    width: 35vw;
+    max-width: unset;
   }
+
   @include tablet {
-    width: 350px;
+    width: 330px;
   }
 }
 
@@ -45,7 +66,7 @@
   top: 75%;
   left: 5%;
   @include tablet {
-    left: 10%;
+    left: 20%;
   }
   @include mobile {
     left: 0;
@@ -56,7 +77,7 @@
   top: 30%;
   right: 1%;
   @include tablet {
-    right: 20%;
+    right: 25%;
   }
   @include mobile {
     right: 10%;
