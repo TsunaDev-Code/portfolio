@@ -1,0 +1,38 @@
+{
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "You're using it right now"
+  },
+  "waterSeal": {
+    "title": "WaterSeal",
+    "description": "Online text-on-image editor"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "A blog is a platform for publishing articles"
+  },
+  "pizza": {
+    "title": "Pizza & CO",
+    "description": "A pizza ordering application"
+  },
+  "cinema": {
+    "title": "PRISM Cinema",
+    "description": "An application for booking movie tickets"
+  },
+  "diary": {
+    "title": "Personal Diary",
+    "description": "A small project to practice basic React skills"
+  },
+  "calendar": {
+    "title": "Calendar",
+    "description": "A multilingual calendar component built with Vue 3 and TypeScript"
+  },
+  "myCharity": {
+    "title": "My Charity",
+    "description": "A landing page for a charity organization"
+  },
+  "petsShop": {
+    "title": "Pets Shop",
+    "description": "A landing page for a pet shop"
+  }
+}

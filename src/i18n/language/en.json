@@ -93,43 +93,7 @@
       "Vue.js case projects",
       "frontend projects",
       "web apps showcase"
-    ],
-    "portfolio": {
-      "title": "Portfolio",
-      "description": "You're using it right now"
-    },
-    "waterSeal": {
-      "title": "WaterSeal",
-      "description": "Online text-on-image editor"
-    },
-    "blog": {
-      "title": "Blog",
-      "description": "A blog is a platform for publishing articles"
-    },
-    "pizza": {
-      "title": "Pizza & CO",
-      "description": "A pizza ordering application"
-    },
-    "cinema": {
-      "title": "PRISM Cinema",
-      "description": "An application for booking movie tickets"
-    },
-    "diary": {
-      "title": "Personal Diary",
-      "description": "A small project to practice basic React skills"
-    },
-    "calendar": {
-      "title": "Calendar",
-      "description": "A multilingual calendar component built with Vue 3 and TypeScript"
-    },
-    "myCharity": {
-      "title": "My Charity",
-      "description": "A landing page for a charity organization"
-    },
-    "petsShop": {
-      "title": "Pets Shop",
-      "description": "A landing page for a pet shop"
-    }
+    ]
   },
   "Skills": {
     "skills": [
@@ -162,11 +126,8 @@
   "Privacy": {
     "title": "Privacy Policy | TsunaDev — Frontend Developer",
     "subTitle": "Privacy Policy",
-    "paragraph1": "I respect your privacy. This policy explains what information may be collected and how it is used when interacting with this site.",
-    "paragraph2": "The site may collect technical data (for example, visit metrics, device type, browser) to improve quality and performance. Personal data is not shared with third parties without your consent, except as required by law.",
-    "paragraph3": "If you have questions about data processing or want to request deletion, please contact me via the contacts page.",
-    "description": "Information about privacy policy and data handling",
-    "keywords": ["privacy policy", "data processing", "privacy"]
+    "description": "Information about the personal data processing policy and privacy protection rules.",
+    "keywords": ["privacy policy", "personal data processing", "privacy"]
   },
   "Header": {
     "home": "home",
