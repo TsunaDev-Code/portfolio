@@ -1,13 +1,12 @@
 import Dots from "@/public/icons/dots.svg";
 import OutlineLogo from "@/public/icons/outline_logo.svg";
-import { media } from "@/src/constants/media";
 import { apps, mainApps } from "@/src/constants/projects";
 import { routes } from "@/src/constants/routes";
 import { SkillId, skills } from "@/src/constants/skills";
 import { Link } from "@/src/i18n/navigation";
 import { createI18nMetadata } from "@/src/metadata";
-import { Button, Project, Section, SkillBox } from "@/src/shared";
-import { AboutMe, Contacts } from "@/src/widget";
+import { Project, Section, SkillBox } from "@/src/shared";
+import { AboutMe, ContactButton, Contacts } from "@/src/widget";
 import cn from "clsx";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
@@ -37,9 +36,7 @@ export default async function Home({ params }: HomeProps) {
             {tHome("subTitle")} <span>{tHome("colorTitle")}</span>
           </h1>
           <p>{tHome("description")}</p>
-          <Link href={media.vk.url} target="_blank" rel="noopener noreferrer">
-            <Button>{tHome("contactBtn")}</Button>
-          </Link>
+          <ContactButton label={tHome("contactBtn")} />
         </div>
         <div className={classes.container}>
           <Image

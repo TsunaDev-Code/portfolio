@@ -8,6 +8,7 @@
   --primary-color: #c778dd;
   --secondary-color: #abb2bf;
   --primary-color-hover: #c778dd33;
+  --secondary-color-hover: #abb2bf33;
 }
 
 @media (prefers-color-scheme: light) {
