@@ -162,140 +162,139 @@
   "Privacy": {
     "title": "Privacy Policy | TsunaDev — Frontend Developer",
     "subTitle": "Privacy Policy",
-    "paragraph1": "I respect your privacy. This policy explains what information may be collected and how it is used when interacting with this site.",
-    "paragraph2": "The site may collect technical data (for example, visit metrics, device type, browser) to improve quality and performance. Personal data is not shared with third parties without your consent, except as required by law.",
-    "paragraph3": "If you have questions about data processing or want to request deletion, please contact me via the contacts page.",
-    "description": "Information about privacy policy and data handling",
-    "keywords": ["privacy policy", "data processing", "privacy"],
+    "description": "Information about the personal data processing policy and privacy protection rules.",
+    "keywords": ["privacy policy", "personal data processing", "privacy"],
     "sections": [
       {
         "title": "General Provisions",
         "blocks": [
           {
             "type": "paragraph",
-            "text": "This privacy policy has been prepared in accordance with the requirements of Federal Law No. 152-FZ of July 27, 2006 'On Personal Data' (hereinafter referred to as the Personal Data Law) and defines the procedure for processing personal data and the security measures taken by Anna Tsyganova (hereinafter referred to as the Operator)."
+            "text": "This personal data processing policy is drawn up in accordance with the requirements of the Federal Law dated 27.07.2006 No. 152-FZ \"On Personal Data\" (hereinafter referred to as the Law on Personal Data) and defines the procedure for processing personal data and measures to ensure the security of personal data taken by Tsyganova Anna Fedorovna (hereinafter referred to as the Operator)."
           },
           {
-            "type": "paragraph",
-            "text": "The Operator considers compliance with the rights and freedoms of individuals when processing their personal data, including the protection of the right to privacy, personal and family secrets, to be a primary goal and condition of its activities."
-          },
-          {
-            "type": "paragraph",
-            "text": "This Operator’s personal data processing policy (hereinafter referred to as the Policy) applies to all information that the Operator may receive about visitors to the website https://tsuna-dev.com."
+            "type": "list",
+            "items": [
+              "The Operator considers compliance with the rights and freedoms of man and citizen in the processing of his personal data, including the protection of the right to privacy, personal and family secrets, as its most important goal and condition for its activities.",
+              "This Operator's policy on personal data processing (hereinafter referred to as the Policy) applies to all information that the Operator can receive about visitors to the website https://tsuna-dev.com."
+            ]
           }
         ]
       },
       {
-        "title": "Key concepts used in the Policy",
+        "title": "Basic Concepts Used in the Policy",
         "blocks": [
           {
             "type": "list",
             "items": [
-              "Automated processing of personal data — processing of personal data using computing equipment.",
-              "Blocking of personal data — temporary suspension of personal data processing (except where processing is required to clarify personal data).",
-              "Website — a set of graphical and informational materials, as well as software for computers and databases that provide access to them on the Internet at https://tsuna-dev.com.",
+              "Automated processing of personal data — processing of personal data using computing facilities.",
+              "Blocking of personal data — temporary termination of personal data processing (except in cases where processing is necessary to clarify personal data).",
+              "Website — a set of graphic and information materials, as well as programs for computers and databases that ensure their availability on the Internet at the network address https://tsuna-dev.com.",
               "Personal data information system — a set of personal data contained in databases and information technologies and technical means that ensure their processing.",
-              "Anonymization of personal data — actions as a result of which it is impossible to determine the owner of personal data without using additional information.",
-              "Processing of personal data — any action or set of actions performed with or without automation using personal data, including collection, recording, systematization, accumulation, storage, clarification (update, modification), extraction, use, transfer (distribution, provision, access), anonymization, blocking, deletion, and destruction of personal data.",
-              "Operator — a state body, municipal body, legal entity, or individual who alone or jointly with others organizes and/or performs personal data processing and determines the purposes of personal data processing, the list of personal data to be processed, and the actions performed with personal data.",
-              "Personal data — any information relating directly or indirectly to an identified or identifiable user of the website https://tsuna-dev.com.",
-              "Personal data permitted by the data subject for distribution — personal data unrestricted access to which is provided by the data subject through consent to the processing of personal data permitted for distribution under the Personal Data Law.",
+              "Anonymization of personal data — actions as a result of which it is impossible to determine without the use of additional information the belonging of personal data to a specific User or other personal data subject.",
+              "Processing of personal data — any action (operation) or set of actions (operations) performed with or without the use of automation means with personal data, including collection, recording, systematization, accumulation, storage, clarification (updating, changing), extraction, use, transfer (distribution, provision, access), anonymization, blocking, deletion, destruction of personal data.",
+              "Operator — a state body, municipal body, legal or natural person that independently or jointly with other persons organizes and/or carries out the processing of personal data, as well as determines the purposes of personal data processing, the composition of personal data to be processed, actions (operations) performed with personal data.",
+              "Personal data — any information relating directly or indirectly to a specific or identifiable User of the website https://tsuna-dev.com.",
+              "Personal data permitted by the subject of personal data for distribution — personal data, access of an unlimited circle of persons to which is provided by the subject of personal data by giving consent to the processing of personal data permitted by the subject of personal data for distribution in the manner prescribed by the Law on Personal Data (hereinafter — personal data permitted for distribution).",
               "User — any visitor to the website https://tsuna-dev.com.",
-              "Provision of personal data — actions directed at disclosing personal data to a particular person or group of persons.",
-              "Distribution of personal data — any actions aimed at disclosing personal data to an unspecified circle of persons or making personal data available to an unlimited circle of persons, including publication in mass media, placement in information and telecommunications networks, or provision of access to personal data in another way.",
-              "Transborder transfer of personal data — transfer of personal data to the territory of a foreign state to a foreign government authority, foreign individual, or foreign legal entity.",
-              "Destruction of personal data — actions as a result of which personal data is irreversibly destroyed with no possibility of restoration and/or material carriers of personal data are destroyed."
+              "Provision of personal data — actions aimed at disclosing personal data to a specific person or a specific circle of persons.",
+              "Distribution of personal data — any actions aimed at disclosing personal data to an indefinite circle of persons (transfer of personal data) or at familiarizing an unlimited circle of persons with personal data, including publicizing personal data in the media, placing in information and telecommunication networks, or providing access to personal data in any other way.",
+              "Cross-border transfer of personal data — transfer of personal data to the territory of a foreign state to the authority of a foreign state, a foreign natural person, or a foreign legal entity.",
+              "Destruction of personal data — any actions as a result of which personal data is irreversibly destroyed with the impossibility of further restoration of the content of personal data in the personal data information system and/or material carriers of personal data are destroyed."
             ]
           }
         ]
       },
       {
-        "title": "Main rights and duties of the Operator",
+        "title": "Basic Rights and Obligations of the Operator",
         "blocks": [
           {
             "type": "list",
+            "title": "The Operator has the right:",
             "items": [
-              "Receive authentic information and/or documents containing personal data from the data subject.",
-              "If the data subject withdraws consent to personal data processing or submits a request to stop processing personal data, the Operator may continue processing personal data without the data subject’s consent if there are grounds specified in the Personal Data Law.",
-              "Independently determine the set and range of measures necessary and sufficient to fulfill duties provided by the Personal Data Law and regulatory legal acts, unless otherwise provided by the Personal Data Law or other federal laws."
+              "to receive reliable information and/or documents containing personal data from the personal data subject;",
+              "in case of withdrawal by the personal data subject of consent to the processing of personal data, as well as the direction of an appeal with a demand to terminate the processing of personal data, the Operator has the right to continue processing personal data without the consent of the personal data subject if there are grounds specified in the Law on Personal Data;",
+              "independently determine the composition and list of measures necessary and sufficient to ensure the fulfillment of the obligations provided for by the Law on Personal Data and the regulatory legal acts adopted in accordance with it, unless otherwise provided by the Law on Personal Data or other federal laws."
             ]
           },
           {
             "type": "list",
+            "title": "The Operator is obliged to:",
             "items": [
-              "Provide the data subject with information regarding the processing of their personal data upon request.",
-              "Organize personal data processing in accordance with applicable Russian Federation legislation.",
-              "Respond to inquiries and requests from data subjects and their legal representatives in accordance with the Personal Data Law.",
-              "Upon request from the authorized body for the protection of personal data subjects’ rights, provide the necessary information within 10 days of receiving such a request.",
-              "Publish or otherwise provide unrestricted access to this personal data processing policy.",
-              "Take legal, organizational, and technical measures to protect personal data from unauthorized or accidental access, destruction, alteration, blocking, copying, provision, distribution, and other unlawful actions.",
-              "Stop the transfer, distribution, provision of access to personal data, cease processing and destroy personal data in the manner and cases provided by the Personal Data Law.",
-              "Perform other duties provided by the Personal Data Law."
+              "provide the personal data subject, at his request, with information concerning the processing of his personal data;",
+              "organize the processing of personal data in the manner prescribed by the current legislation of the Russian Federation;",
+              "respond to appeals and requests of personal data subjects and their legal representatives in accordance with the requirements of the Law on Personal Data;",
+              "notify the authorized body for the protection of the rights of personal data subjects, at the request of this body, of the necessary information within 10 days from the date of receipt of such a request;",
+              "publish or otherwise ensure unlimited access to this Policy on personal data processing;",
+              "take legal, organizational and technical measures to protect personal data from illegal or accidental access to them, destruction, modification, blocking, copying, provision, distribution of personal data, as well as from other illegal actions in relation to personal data;",
+              "terminate the transfer (distribution, provision, access) of personal data, terminate the processing and destroy personal data in the manner and cases provided for by the Law on Personal Data;",
+              "fulfill other obligations provided for by the Law on Personal Data."
             ]
           }
         ]
       },
       {
-        "title": "Main rights and duties of personal data subjects",
+        "title": "Basic Rights and Obligations of Personal Data Subjects",
         "blocks": [
           {
             "type": "list",
+            "title": "Personal data subjects have the right to:",
             "items": [
-              "Obtain information concerning the processing of their personal data, except in cases provided for by federal laws.",
-              "Request that the Operator clarify, block, or destroy their personal data if it is incomplete, outdated, inaccurate, unlawfully obtained, or unnecessary for the stated processing purpose.",
-              "Require prior consent for the processing of personal data for marketing purposes.",
-              "Withdraw consent to personal data processing and request the termination of such processing.",
-              "Appeal unlawful actions or inaction of the Operator to the authorized body for personal data protection or through the courts.",
-              "Exercise other rights provided by law."
+              "receive information concerning the processing of his personal data, except in cases provided for by federal laws. Information is provided to the personal data subject by the Operator in an accessible form, and it should not contain personal data relating to other personal data subjects, except in cases where there are legal grounds for disclosing such personal data. The list of information and the procedure for obtaining it are established by the Law on Personal Data;",
+              "demand from the operator to clarify his personal data, block or destroy them in the event that the personal data is incomplete, outdated, inaccurate, illegally obtained or not necessary for the stated purpose of processing, as well as to take the measures provided for by law to protect their rights;",
+              "put forward a condition of preliminary consent when processing personal data for the purpose of promoting goods, works and services on the market;",
+              "to withdraw consent to the processing of personal data, as well as to send a demand to terminate the processing of personal data;",
+              "appeal to the authorized body for the protection of the rights of personal data subjects or in court the illegal actions or inaction of the Operator when processing his personal data;",
+              "to exercise other rights provided for by the legislation of the Russian Federation."
+            ]
+          },
+          {
+            "type": "list",
+            "title": "Personal data subjects are obliged to:",
+            "items": [
+              "provide the Operator with reliable data about themselves;",
+              "notify the Operator of the clarification (updating, changing) of their personal data."
             ]
           },
           {
             "type": "list",
             "items": [
-              "Provide the Operator with accurate personal data about themselves.",
-              "Inform the Operator of clarifications, updates, or changes to their personal data."
+              "Persons who have provided the Operator with unreliable information about themselves, or information about another personal data subject without the consent of the latter, are responsible in accordance with the legislation of the Russian Federation."
             ]
-          },
-          {
-            "type": "paragraph",
-            "text": "Individuals who provide the Operator with false information about themselves or information about another data subject without that person’s consent are liable under Russian law."
           }
         ]
       },
       {
-        "title": "Principles of personal data processing",
+        "title": "Principles of Personal Data Processing",
         "blocks": [
           {
             "type": "list",
             "items": [
               "Personal data processing is carried out on a lawful and fair basis.",
-              "Personal data processing is limited to specific, predetermined, and lawful purposes.",
-              "Databases containing personal data processed for incompatible purposes must not be combined.",
-              "Only personal data necessary to achieve the processing purposes are processed.",
-              "The content and volume of personal data processed correspond to the declared purposes of processing.",
-              "Personal data accuracy, sufficiency, and, if necessary, relevance are ensured during processing.",
-              "Personal data are stored in a form that permits identification of the data subject no longer than required by the processing purposes."
+              "Personal data processing is limited to the achievement of specific, predetermined and legitimate purposes. Processing of personal data incompatible with the purposes of collecting personal data is not allowed.",
+              "Combining databases containing personal data, the processing of which is carried out for purposes incompatible with each other, is not allowed.",
+              "Only personal data that meets the purposes of their processing is subject to processing.",
+              "The content and volume of processed personal data correspond to the stated purposes of processing. Excessiveness of processed personal data in relation to the stated purposes of their processing is not allowed.",
+              "When processing personal data, the accuracy of personal data, their sufficiency, and, if necessary, relevance in relation to the purposes of processing personal data is ensured. The Operator takes the necessary measures and/or ensures their adoption to remove or clarify incomplete or inaccurate data.",
+              "Personal data is stored in a form that allows the personal data subject to be determined, no longer than the purposes of processing personal data require, unless the period of storage of personal data is established by federal law, a contract, the party, beneficiary or guarantor of which is the personal data subject. Processed personal data is destroyed or anonymized upon the achievement of the processing goals or in case of loss of the need to achieve these goals, unless otherwise provided by federal law."
             ]
           }
         ]
       },
       {
-        "title": "Purposes of personal data processing",
+        "title": "Purposes of Personal Data Processing",
         "blocks": [
           {
             "type": "table",
             "rows": [
-              [
-                "Purpose of processing",
-                "Informing the User by sending electronic messages"
-              ],
+              ["Purpose of processing", "informing the User by sending emails"],
               [
                 "Personal data",
-                "Last name, first name, patronymic; email address"
+                ["surname, first name, patronymic", "email address"]
               ],
               [
                 "Legal grounds",
-                "Contracts concluded between the Operator and the personal data subject"
+                "contracts concluded between the operator and the personal data subject"
               ],
               [
                 "Types of personal data processing",
@@ -306,88 +305,87 @@
         ]
       },
       {
-        "title": "Conditions of personal data processing",
+        "title": "Conditions for Personal Data Processing",
         "blocks": [
           {
             "type": "list",
             "items": [
-              "Personal data processing is carried out with the consent of the data subject.",
-              "Personal data processing is necessary to achieve purposes provided by an international treaty of the Russian Federation or law.",
-              "Personal data processing is necessary for the administration of justice, enforcement of a court act, or another act subject to enforcement under Russian law.",
-              "Personal data processing is necessary for performance of a contract where the data subject is a party, beneficiary, or guarantor.",
-              "Personal data processing is necessary to protect the rights and lawful interests of the Operator or third parties, or to achieve socially significant purposes, provided that the rights of the data subject are not violated.",
-              "Processing is carried out for personal data whose unrestricted access is provided by the data subject.",
-              "Processing is carried out for personal data subject to publication or mandatory disclosure by federal law."
+              "Personal data processing is carried out with the consent of the personal data subject to the processing of his personal data.",
+              "Personal data processing is necessary to achieve the goals provided for by the international treaty of the Russian Federation or the law, to carry out the functions, powers and duties imposed on the operator by the legislation of the Russian Federation.",
+              "Personal data processing is necessary for the administration of justice, execution of a court act, an act of another body or official, subject to execution in accordance with the legislation of the Russian Federation on enforcement proceedings.",
+              "Personal data processing is necessary for the execution of a contract, the party, beneficiary or guarantor of which is the personal data subject, as well as for the conclusion of a contract at the initiative of the personal data subject or a contract under which the personal data subject will be the beneficiary or guarantor.",
+              "Personal data processing is necessary for the exercise of the rights and legitimate interests of the operator or third parties, or for the achievement of socially significant goals, provided that the rights and freedoms of the personal data subject are not violated.",
+              "Processing of personal data, access of an unlimited circle of persons to which is provided by the personal data subject or at his request (hereinafter — publicly available personal data) is carried out.",
+              "Processing of personal data subject to publication or mandatory disclosure in accordance with federal law is carried out."
             ]
           }
         ]
       },
       {
-        "title": "Procedure for collecting, storing, transferring and other processing of personal data",
+        "title": "Procedure for Collection, Storage, Transfer and Other Types of Personal Data Processing",
         "blocks": [
           {
             "type": "paragraph",
-            "text": "The security of personal data processed by the Operator is ensured through the implementation of legal, organizational, and technical measures necessary to comply with applicable data protection legislation."
+            "text": "The security of personal data processed by the Operator is ensured through the implementation of legal, organizational and technical measures necessary to fully comply with the requirements of the current legislation in the field of personal data protection."
           },
           {
             "type": "list",
             "items": [
-              "The Operator ensures the safety of personal data and takes measures to prevent unauthorized access to personal data.",
-              "The User’s personal data will not be transferred to third parties except as required by law or with the User’s consent.",
-              "If inaccuracies are discovered, the User may send a notice to the Operator’s email privacy@thismywebsite.com with the subject 'Personal data update'.",
-              "The period of personal data processing is determined by the purpose for which the personal data were collected, unless otherwise required by contract or law.",
-              "The User may withdraw consent to personal data processing by sending a notice to privacy@thismywebsite.com with the subject 'Withdrawal of consent to personal data processing'.",
-              "All information collected by third-party services is stored and processed by those parties according to their user agreement and privacy policy; the Operator is not responsible for third-party actions.",
-              "Restrictions imposed by the data subject on the transfer or processing of personal data permitted for distribution do not apply when personal data are processed in the public interest under government, public, or other lawful purposes.",
-              "The Operator ensures the confidentiality of personal data during processing.",
-              "The Operator stores personal data no longer than required to achieve the processing purposes, unless a longer period is established by federal law or contract.",
-              "Processing of personal data may cease when the processing purposes are achieved, consent expires, consent is withdrawn, a request to stop processing is received, or unlawful processing is identified."
+              "The Operator ensures the safety of personal data and takes all possible measures to exclude access to personal data by unauthorized persons.",
+              "The User's personal data will never, under any circumstances, be transferred to third parties, except in cases related to the execution of the current legislation, or if the personal data subject has given consent to the Operator to transfer data to a third party for the execution of obligations under a civil law contract.",
+              "In case of inaccuracies in personal data, the User can update them independently by sending a notice to the Operator's email address info@tsuna-dev.com with the note \"Personal Data Update\".",
+              "The period of personal data processing is determined by the achievement of the goals for which the personal data was collected, unless a different period is provided for by the contract or current legislation. \nThe User can withdraw his consent to the processing of personal data at any time by sending a notice to the Operator by email to the Operator's email address info@tsuna-dev.com with the note \"Withdrawal of consent to the processing of personal data\".",
+              "All information collected by third-party services, including payment systems, communication means and other service providers, is stored and processed by these persons (Operators) in accordance with their User Agreement and Privacy Policy. The personal data subject and/or with the specified documents. The Operator is not responsible for the actions of third parties, including the service providers specified in this paragraph.",
+              "The restrictions established by the personal data subject on the transfer (except for the provision of access), as well as on the processing or conditions of processing (except for receiving access) of personal data permitted for distribution, do not apply in cases of processing personal data in the state, public and other public interests defined by the legislation of the Russian Federation.",
+              "The Operator ensures the confidentiality of personal data when processing personal data.",
+              "The Operator stores personal data in a form that allows the personal data subject to be determined, no longer than the purposes of processing personal data require, unless the period of storage of personal data is established by federal law, a contract, the party, beneficiary or guarantor of which is the personal data subject.",
+              "The condition for termination of personal data processing may be the achievement of the purposes of personal data processing, the expiration of the consent of the personal data subject, withdrawal of consent by the personal data subject or a demand to terminate the processing of personal data, as well as the detection of illegal processing of personal data."
             ]
           }
         ]
       },
       {
-        "title": "List of actions performed by the Operator with received personal data",
+        "title": "List of Actions Performed by the Operator with the Received Personal Data",
         "blocks": [
           {
             "type": "list",
             "items": [
-              "Collection, recording, systematization, accumulation, storage, clarification (update, modification), extraction, use, transfer (distribution, provision, access), anonymization, blocking, deletion, and destruction of personal data.",
-              "Automated processing of personal data with receipt and/or transmission of information via information and telecommunications networks or without using such networks."
+              "The Operator carries out collection, recording, systematization, accumulation, storage, clarification (updating, changing), extraction, use, transfer (distribution, provision, access), anonymization, blocking, deletion and destruction of personal data.",
+              "The Operator carries out automated processing of personal data with the receipt and/or transmission of the received information via information and telecommunication networks or without it."
             ]
           }
         ]
       },
       {
-        "title": "Transborder transfer of personal data",
+        "title": "Cross-border Transfer of Personal Data",
         "blocks": [
           {
             "type": "list",
             "items": [
-              "Before commencing transborder transfer of personal data, the Operator must notify the authorized body of its intention to carry out such transfer.",
-              "Before submitting the notification, the Operator must obtain from foreign authorities, foreign individuals, or foreign legal entities the necessary information about the planned data transfer."
+              "Before starting activities for the cross-border transfer of personal data, the Operator is obliged to notify the authorized body for the protection of the rights of personal data subjects of his intention to carry out cross-border transfer of personal data (such a notification is sent separately from the notification of the intention to carry out personal data processing).",
+              "Before submitting the above notification, the Operator is obliged to receive from the authorities of a foreign state, foreign natural persons, foreign legal entities to which the cross-border transfer of personal data is planned, the relevant information."
             ]
           }
         ]
       },
       {
-        "title": "Confidentiality of personal data",
+        "title": "Confidentiality of Personal Data",
         "blocks": [
           {
             "type": "paragraph",
-            "text": "The Operator and other persons who have access to personal data must not disclose or distribute personal data to third parties without the consent of the data subject, unless otherwise required by federal law."
+            "text": "The Operator and other persons who have received access to personal data are obliged not to disclose to third parties and not to distribute personal data without the consent of the personal data subject, unless otherwise provided by federal law."
           }
         ]
       },
       {
-        "title": "Final provisions",
+        "title": "Final Provisions",
         "blocks": [
           {
             "type": "list",
             "items": [
-              "The User may obtain clarifications about the processing of their personal data by contacting the Operator at info@tsuna-dev.com.",
-              "Any changes to the personal data processing policy will be reflected in this document; the policy remains in effect indefinitely until replaced by a new version.",
-              "The current version of the Policy is available online at https://tsuna-dev.com/privacy."
+              "The User can receive any clarifications on issues of interest concerning the processing of his personal data by contacting the Operator via email at info@tsuna-dev.com.",
+              "Any changes to the personal data processing policy by the Operator will be reflected in this document. The Policy is valid indefinitely until it is replaced by a new version.",
+              "The current version of the Policy is freely available on the Internet at https://tsuna-dev.com/privacy."
             ]
           }
         ]
