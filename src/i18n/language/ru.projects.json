@@ -1,0 +1,38 @@
+{
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Вы используете его прямо сейчас"
+  },
+  "waterSeal": {
+    "title": "WaterSeal",
+    "description": "Онлайн-редактор текста на изображениях"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Blog — платформа для публикации статей"
+  },
+  "pizza": {
+    "title": "Pizza & CO",
+    "description": "Приложение для заказа пиццы"
+  },
+  "cinema": {
+    "title": "PRISM Cinema",
+    "description": "Приложение для бронирования билетов в кино"
+  },
+  "diary": {
+    "title": "Личный дневник",
+    "description": "Небольшой проект для практики базовых навыков React"
+  },
+  "calendar": {
+    "title": "Календарь",
+    "description": "Многоязыковый компонент календаря, созданный с использованием Vue 3 и TypeScript"
+  },
+  "myCharity": {
+    "title": "My Charity",
+    "description": "Проект для благотворительной организации, предоставляющей помощь нуждающимся"
+  },
+  "petsShop": {
+    "title": "Pets Shop",
+    "description": "Простой сайт для магазина домашних животных"
+  }
+}
