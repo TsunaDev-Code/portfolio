@@ -8,10 +8,12 @@ interface PrivacyProps {
   params: Promise<{ locale: string }>;
 }
 
+type PrivacyTableCell = string | string[];
+
 type PrivacyBlock =
   | { type: "paragraph"; text: string }
-  | { type: "list"; items: string[] }
-  | { type: "table"; headings: string[]; rows: string[][] };
+  | { type: "list"; title?: string; items: string[] }
+  | { type: "table"; headings?: string[]; rows: PrivacyTableCell[][] };
 
 type PrivacySection = {
   title: string;
@@ -36,9 +38,21 @@ export default async function Privacy({ params }: PrivacyProps) {
             {section.blocks.map((block, index) =>
               block.type === "list" ? (
                 <ol key={index} className={classes.list}>
+                  {block.title && (
+                    <li className={classes.listTitle}>
+                      {sectionIndex + 1}.{index + 1}. {block.title}
+                    </li>
+                  )}
                   {block.items.map((item, itemIndex) => (
                     <li key={itemIndex}>
-                      {sectionIndex + 1}.{itemIndex + 1}. {item}
+                      {block.title ? (
+                        "— "
+                      ) : (
+                        <>
+                          {sectionIndex + 1}.{itemIndex + 1}.
+                        </>
+                      )}
+                      {item}
                     </li>
                   ))}
                 </ol>
@@ -49,7 +63,17 @@ export default async function Privacy({ params }: PrivacyProps) {
                       {block.rows.map((row, rowIndex) => (
                         <tr key={rowIndex}>
                           {row.map((cell, cellIndex) => (
-                            <td key={cellIndex}>{cell}</td>
+                            <td key={cellIndex}>
+                              {Array.isArray(cell) ? (
+                                <ul className={classes.cellList}>
+                                  {cell.map((item, itemIndex) => (
+                                    <li key={itemIndex}>{item}</li>
+                                  ))}
+                                </ul>
+                              ) : (
+                                cell
+                              )}
+                            </td>
                           ))}
                         </tr>
                       ))}
