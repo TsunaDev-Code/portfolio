@@ -172,6 +172,12 @@
     "emailHeading": "Новое сообщение с сайта TsunaDev",
     "emailFrom": "От:",
     "emailTitle": "Тема:",
-    "emailMessage": "Сообщение:"
+    "emailMessage": "Сообщение:",
+    "validation": {
+      "nameRequired": "Пожалуйста, введите ваше имя",
+      "invalidEmail": "Пожалуйста, введите корректный email",
+      "titleRequired": "Пожалуйста, укажите тему обращения",
+      "messageRequired": "Пожалуйста, введите сообщение"
+    }
   }
 }

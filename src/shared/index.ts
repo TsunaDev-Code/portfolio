@@ -1,4 +1,6 @@
 export { Button } from "./Button";
+export { Checkbox } from "./Checkbox";
+export { FormField } from "./FormField";
 export { LanguageSwitcher } from "./LanguageSwitcher";
 export { Media } from "./Media";
 export { Project } from "./Project";

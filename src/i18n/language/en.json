@@ -166,6 +166,12 @@
     "emailHeading": "New Message from TsunaDev",
     "emailFrom": "From:",
     "emailTitle": "Title:",
-    "emailMessage": "Message:"
+    "emailMessage": "Message:",
+    "validation": {
+      "nameRequired": "Name is required",
+      "invalidEmail": "Invalid email address",
+      "titleRequired": "Subject is required",
+      "messageRequired": "Message is required"
+    }
   }
 }

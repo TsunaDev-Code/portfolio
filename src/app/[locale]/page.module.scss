@@ -32,10 +32,9 @@
   h1 {
     font-size: 32px;
     font-weight: 600;
-  }
-
-  span {
-    color: var(--primary-color);
+    & > span {
+      color: var(--primary-color);
+    }
   }
 
   p {

@@ -1,0 +1,55 @@
+@use "@/src/app/mixins" as *;
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 100%;
+}
+
+.label {
+  color: var(--secondary-color);
+}
+
+.input,
+.textarea {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--secondary-color);
+  color: var(--color);
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  &:focus {
+    outline: none;
+    border-color: var(--color);
+  }
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.labelError {
+  color: var(--error-color);
+}
+
+.inputError {
+  border-color: var(--error-color);
+  outline: none;
+
+  &:focus {
+    border-color: var(--error-color-dark);
+  }
+}
+
+.errorMessage {
+  display: block;
+  color: var(--error-color);
+  font-size: 0.7rem;
+  margin-top: 0.1rem;
+}

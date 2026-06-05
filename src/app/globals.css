@@ -1,24 +1,60 @@
 @import "tailwindcss";
 
 :root {
+  /* Основные фоны и текст */
   --background: #292b31;
   --background-main: #2d3035;
   --foreground: #ededed;
   --color: #ffffff;
+
+  /* Акцентные цвета */
   --primary-color: #c778dd;
-  --secondary-color: #abb2bf;
   --primary-color-hover: #c778dd33;
+  --secondary-color: #abb2bf;
   --secondary-color-hover: #abb2bf33;
+
+  /* Состояния  */
+  --error-color: #dc3545;
+  --error-color-dark: #b42534;
+  --error-bg: rgba(220, 53, 69, 0.15);
+  --error-border: rgba(220, 53, 69, 0.3);
+  --success-color: #51cf66;
+  --success-bg: rgba(40, 167, 69, 0.15);
+  --success-border: rgba(40, 167, 69, 0.3);
+
+  /* Интерфейсные элементы */
+  --overlay-bg: rgba(0, 0, 0, 0.7);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --hover-bg: rgba(255, 255, 255, 0.1);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
+    /* Основные фоны и текст */
     --background: #f3f3f3;
     --background-main: #fcfcfc;
     --foreground: #616161;
     --color: #000000;
+
+    /* Акцентные цвета */
     --primary-color: #a51fce;
+    --primary-color-hover: #a51fce22;
     --secondary-color: #656a6e;
+    --secondary-color-hover: #656a6e22;
+
+    /* Состояния */
+    --error-color: #dc3545;
+    --error-color-dark: #b02a37;
+    --error-bg: rgba(220, 53, 69, 0.08);
+    --error-border: rgba(220, 53, 69, 0.25);
+    --success-color: #198754;
+    --success-bg: rgba(25, 135, 84, 0.08);
+    --success-border: rgba(25, 135, 84, 0.25);
+
+    /* Интерфейсные элементы */
+    --overlay-bg: rgba(0, 0, 0, 0.5);
+    --border-color: rgba(0, 0, 0, 0.15);
+    --hover-bg: rgba(0, 0, 0, 0.05);
   }
 }
 
