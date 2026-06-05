@@ -1,5 +1,4 @@
 export { Button } from "./Button";
-export { ContactModal } from "./ContactModal";
 export { LanguageSwitcher } from "./LanguageSwitcher";
 export { Media } from "./Media";
 export { Project } from "./Project";

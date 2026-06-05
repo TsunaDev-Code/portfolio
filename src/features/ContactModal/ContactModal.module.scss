@@ -25,7 +25,6 @@
 
 .modal {
   background: var(--background);
-  // max-height: 85vh;
   z-index: 1000;
   animation: slideUp 0.15s ease-out;
   position: fixed;
@@ -49,12 +48,11 @@
   align-items: center;
   padding: 1rem 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.header h2 {
-  margin: 0;
-  font-weight: 700;
-  color: var(--color);
+  h2 {
+    margin: 0;
+    font-weight: 700;
+    color: var(--color);
+  }
 }
 
 .closeBtn {
@@ -70,7 +68,6 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
-
   &:hover {
     background: rgba(255, 255, 255, 0.1);
     color: var(--color);
@@ -95,35 +92,61 @@
   flex-direction: column;
   gap: 0.3rem;
   width: 100%;
+  label {
+    color: var(--secondary-color);
+  }
+  input,
+  textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--secondary-color);
+    color: var(--color);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    &:focus {
+      outline: none;
+      border-color: var(--color);
+    }
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
 }
 
-.formGroup label {
+/* ✅ Стили для чекбокса */
+.checkboxGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
   color: var(--secondary-color);
-}
+  line-height: 1.4;
 
-.formGroup input,
-.formGroup textarea {
-  padding: 0.75rem;
-  border: 1px solid var(--secondary-color);
-  color: var(--color);
-  font-size: 0.95rem;
-  font-family: inherit;
-  transition: all 0.2s ease;
-
-  &:focus {
-    outline: none;
-    border-color: var(--color);
+  input[type="checkbox"] {
+    margin-top: 0.15rem;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--color);
   }
 
-  &:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+  label {
+    cursor: pointer;
   }
-}
 
-.formGroup textarea {
-  resize: vertical;
-  min-height: 120px;
+  a {
+    color: var(--color);
+    text-decoration: underline;
+    transition: opacity 0.2s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 .error {

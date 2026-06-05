@@ -1,8 +1,8 @@
 "use client";
-
 import { FormEvent, useState } from "react";
-import { Button } from "../Button";
+import { Link } from "@/src/i18n/navigation";
 import classes from "./ContactModal.module.scss";
+import { Button } from "@/src/shared";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -20,7 +20,9 @@ export const ContactModal = ({
     email: "",
     title: "",
     message: "",
+    agreedToPrivacy: false,
   });
+
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
@@ -28,7 +30,14 @@ export const ContactModal = ({
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    const { name, value } = e.target;
+    const target = e.target;
+    const name = target.name;
+
+    const value =
+      target.type === "checkbox"
+        ? (target as HTMLInputElement).checked
+        : target.value;
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -38,15 +47,18 @@ export const ContactModal = ({
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsLoading(true);
     setError(null);
 
+    if (!formData.agreedToPrivacy) {
+      setError("Необходимо дать согласие на обработку персональных данных");
+      return;
+    }
+
+    setIsLoading(true);
     try {
       const response = await fetch("/api/send-email", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
@@ -56,7 +68,14 @@ export const ContactModal = ({
       }
 
       setSuccess(true);
-      setFormData({ name: "", email: "", title: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        title: "",
+        message: "",
+        agreedToPrivacy: false,
+      });
+
       setTimeout(() => {
         onClose();
         setSuccess(false);
@@ -86,7 +105,6 @@ export const ContactModal = ({
             ✕
           </button>
         </div>
-
         <form onSubmit={handleSubmit} className={classes.form}>
           <div className={classes.fieldsGroup}>
             <div className={classes.formGroup}>
@@ -102,7 +120,6 @@ export const ContactModal = ({
                 disabled={isLoading}
               />
             </div>
-
             <div className={classes.formGroup}>
               <label htmlFor="email">Email</label>
               <input
@@ -144,6 +161,23 @@ export const ContactModal = ({
               disabled={isLoading}
             />
           </div>
+          <div className={classes.checkboxGroup}>
+            <input
+              type="checkbox"
+              id="privacy"
+              name="agreedToPrivacy"
+              checked={formData.agreedToPrivacy}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="privacy">
+              Я даю согласие на обработку{" "}
+              <Link href="/privacy" target="_blank" rel="noopener noreferrer">
+                персональных данных
+              </Link>{" "}
+              в соответствии с политикой конфиденциальности
+            </label>
+          </div>
 
           {error && <div className={classes.error}>{error}</div>}
           {success && (
@@ -155,7 +189,7 @@ export const ContactModal = ({
               Cancel
             </Button>
             <Button type="submit" disabled={isLoading}>
-              {isLoading ? "Sending..." : submitBtnLabel}
+              {isLoading ? "Sending..." : submitBtnLabel || "Send"}
             </Button>
           </div>
         </form>

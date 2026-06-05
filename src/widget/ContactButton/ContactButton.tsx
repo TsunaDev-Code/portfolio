@@ -1,6 +1,7 @@
 "use client";
 
-import { Button, ContactModal } from "@/src/shared";
+import { ContactModal } from "@/src/features";
+import { Button } from "@/src/shared";
 import { useState } from "react";
 
 interface ContactButtonProps {
