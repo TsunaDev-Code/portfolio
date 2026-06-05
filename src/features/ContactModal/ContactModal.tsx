@@ -1,6 +1,8 @@
 "use client";
-import { FormEvent, useState } from "react";
 import { Link } from "@/src/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
+import { FormEvent, useState } from "react";
+
 import classes from "./ContactModal.module.scss";
 import { Button } from "@/src/shared";
 
@@ -15,6 +17,9 @@ export const ContactModal = ({
   onClose,
   submitBtnLabel,
 }: ContactModalProps) => {
+  const t = useTranslations("ContactModal");
+  const locale = useLocale();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,16 +37,12 @@ export const ContactModal = ({
   ) => {
     const target = e.target;
     const name = target.name;
-
     const value =
       target.type === "checkbox"
         ? (target as HTMLInputElement).checked
         : target.value;
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
     setError(null);
   };
 
@@ -50,7 +51,7 @@ export const ContactModal = ({
     setError(null);
 
     if (!formData.agreedToPrivacy) {
-      setError("Необходимо дать согласие на обработку персональных данных");
+      setError(t("privacyError"));
       return;
     }
 
@@ -59,7 +60,7 @@ export const ContactModal = ({
       const response = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, locale }),
       });
 
       if (!response.ok) {
@@ -81,9 +82,7 @@ export const ContactModal = ({
         setSuccess(false);
       }, 2000);
     } catch (err) {
-      setError(
-        err instanceof Error ? err.message : "An error occurred while sending",
-      );
+      setError(err instanceof Error ? err.message : t("errorMessage"));
     } finally {
       setIsLoading(false);
     }
@@ -96,7 +95,7 @@ export const ContactModal = ({
       <div className={classes.overlay} onClick={onClose} />
       <div className={classes.modal}>
         <div className={classes.header}>
-          <h2>Contact Me</h2>
+          <h2>{t("title")}</h2>
           <button
             className={classes.closeBtn}
             onClick={onClose}
@@ -105,10 +104,11 @@ export const ContactModal = ({
             ✕
           </button>
         </div>
+
         <form onSubmit={handleSubmit} className={classes.form}>
           <div className={classes.fieldsGroup}>
             <div className={classes.formGroup}>
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">{t("nameLabel")}</label>
               <input
                 id="name"
                 type="text"
@@ -116,12 +116,12 @@ export const ContactModal = ({
                 value={formData.name}
                 onChange={handleChange}
                 required
-                placeholder="Your name"
+                placeholder={t("namePlaceholder")}
                 disabled={isLoading}
               />
             </div>
             <div className={classes.formGroup}>
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{t("emailLabel")}</label>
               <input
                 id="email"
                 type="email"
@@ -129,13 +129,14 @@ export const ContactModal = ({
                 value={formData.email}
                 onChange={handleChange}
                 required
-                placeholder="your@email.com"
+                placeholder={t("emailPlaceholder")}
                 disabled={isLoading}
               />
             </div>
           </div>
+
           <div className={classes.formGroup}>
-            <label htmlFor="title">Title</label>
+            <label htmlFor="title">{t("titleLabel")}</label>
             <input
               id="title"
               type="text"
@@ -143,24 +144,25 @@ export const ContactModal = ({
               value={formData.title}
               onChange={handleChange}
               required
-              placeholder="Message title"
+              placeholder={t("titlePlaceholder")}
               disabled={isLoading}
             />
           </div>
 
           <div className={classes.formGroup}>
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">{t("messageLabel")}</label>
             <textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
               required
-              placeholder="Your message"
+              placeholder={t("messagePlaceholder")}
               rows={5}
               disabled={isLoading}
             />
           </div>
+
           <div className={classes.checkboxGroup}>
             <input
               type="checkbox"
@@ -171,25 +173,30 @@ export const ContactModal = ({
               required
             />
             <label htmlFor="privacy">
-              Я даю согласие на обработку{" "}
-              <Link href="/privacy" target="_blank" rel="noopener noreferrer">
-                персональных данных
-              </Link>{" "}
-              в соответствии с политикой конфиденциальности
+              {t("privacyAgreement.part1")}
+              <Link
+                href="/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.privacyLink}
+              >
+                {t("privacyAgreement.link")}
+              </Link>
+              {t("privacyAgreement.part2")}
             </label>
           </div>
 
           {error && <div className={classes.error}>{error}</div>}
           {success && (
-            <div className={classes.success}>Message sent successfully!</div>
+            <div className={classes.success}>{t("successMessage")}</div>
           )}
 
           <div className={classes.actions}>
             <Button view="secondary" disabled={isLoading} onClick={onClose}>
-              Cancel
+              {t("cancelBtn")}
             </Button>
             <Button type="submit" disabled={isLoading}>
-              {isLoading ? "Sending..." : submitBtnLabel || "Send"}
+              {isLoading ? t("sending") : submitBtnLabel || t("submitBtn")}
             </Button>
           </div>
         </form>

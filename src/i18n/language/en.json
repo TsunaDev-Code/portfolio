@@ -141,5 +141,31 @@
     "media": "Media",
     "madeBy": "Made by TsunaDev",
     "description": "Frontend developer"
+  },
+  "ContactModal": {
+    "title": "Contact Me",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "titleLabel": "Title",
+    "titlePlaceholder": "Message title",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Your message",
+    "privacyAgreement": {
+      "part1": "I agree to the processing of ",
+      "link": "personal data",
+      "part2": " in accordance with the privacy policy."
+    },
+    "privacyError": "You must agree to the processing of personal data",
+    "cancelBtn": "Cancel",
+    "submitBtn": "Send",
+    "sending": "Sending...",
+    "successMessage": "Message sent successfully!",
+    "errorMessage": "An error occurred while sending",
+    "emailHeading": "New Message from TsunaDev",
+    "emailFrom": "From:",
+    "emailTitle": "Title:",
+    "emailMessage": "Message:"
   }
 }

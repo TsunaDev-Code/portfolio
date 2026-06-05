@@ -147,5 +147,31 @@
     "media": "Контакты",
     "madeBy": "Создано TsunaDev",
     "description": "Frontend разработчик"
+  },
+  "ContactModal": {
+    "title": "Связаться со мной",
+    "nameLabel": "Имя",
+    "namePlaceholder": "Ваше имя",
+    "emailLabel": "Email",
+    "emailPlaceholder": "ваш@email.com",
+    "titleLabel": "Тема",
+    "titlePlaceholder": "Тема сообщения",
+    "messageLabel": "Сообщение",
+    "messagePlaceholder": "Ваше сообщение",
+    "privacyAgreement": {
+      "part1": "Я даю согласие на обработку ",
+      "link": "персональных данных",
+      "part2": " в соответствии с политикой конфиденциальности."
+    },
+    "privacyError": "Необходимо дать согласие на обработку персональных данных",
+    "cancelBtn": "Отмена",
+    "submitBtn": "Отправить",
+    "sending": "Отправка...",
+    "successMessage": "Сообщение успешно отправлено!",
+    "errorMessage": "Произошла ошибка при отправке",
+    "emailHeading": "Новое сообщение с сайта TsunaDev",
+    "emailFrom": "От:",
+    "emailTitle": "Тема:",
+    "emailMessage": "Сообщение:"
   }
 }
