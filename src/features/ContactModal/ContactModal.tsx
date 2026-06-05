@@ -1,10 +1,10 @@
 "use client";
-import { Link } from "@/src/i18n/navigation";
-import { useLocale, useTranslations } from "next-intl";
-import { FormEvent, useState } from "react";
 
-import classes from "./ContactModal.module.scss";
+import { Link } from "@/src/i18n/navigation";
 import { Button } from "@/src/shared";
+import { useLocale, useTranslations } from "next-intl";
+import { FormEvent, useEffect, useRef, useState } from "react";
+import classes from "./ContactModal.module.scss";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -20,6 +20,9 @@ export const ContactModal = ({
   const t = useTranslations("ContactModal");
   const locale = useLocale();
 
+  const modalRef = useRef<HTMLDivElement>(null);
+  const firstInputRef = useRef<HTMLInputElement>(null);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,15 +35,31 @@ export const ContactModal = ({
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      firstInputRef.current?.focus();
+
+      const handleEscape = (e: KeyboardEvent) => {
+        if (e.key === "Escape") onClose();
+      };
+      document.addEventListener("keydown", handleEscape);
+
+      return () => {
+        document.body.style.overflow = "";
+        document.removeEventListener("keydown", handleEscape);
+      };
+    }
+  }, [isOpen, onClose]);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    const target = e.target;
-    const name = target.name;
+    const { name, type } = e.target;
     const value =
-      target.type === "checkbox"
-        ? (target as HTMLInputElement).checked
-        : target.value;
+      type === "checkbox"
+        ? (e.target as HTMLInputElement).checked
+        : e.target.value;
 
     setFormData((prev) => ({ ...prev, [name]: value }));
     setError(null);
@@ -80,7 +99,7 @@ export const ContactModal = ({
       setTimeout(() => {
         onClose();
         setSuccess(false);
-      }, 2000);
+      }, 2500);
     } catch (err) {
       setError(err instanceof Error ? err.message : t("errorMessage"));
     } finally {
@@ -92,24 +111,33 @@ export const ContactModal = ({
 
   return (
     <>
-      <div className={classes.overlay} onClick={onClose} />
-      <div className={classes.modal}>
+      <div className={classes.overlay} onClick={onClose} aria-hidden="true" />
+
+      <div
+        className={classes.modal}
+        ref={modalRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
         <div className={classes.header}>
-          <h2>{t("title")}</h2>
+          <h2 id="modal-title">{t("title")}</h2>
           <button
             className={classes.closeBtn}
             onClick={onClose}
-            aria-label="Close modal"
+            aria-label={t("cancelBtn")}
+            type="button"
           >
             ✕
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className={classes.form}>
+        <form onSubmit={handleSubmit} className={classes.form} noValidate>
           <div className={classes.fieldsGroup}>
             <div className={classes.formGroup}>
               <label htmlFor="name">{t("nameLabel")}</label>
               <input
+                ref={firstInputRef}
                 id="name"
                 type="text"
                 name="name"
@@ -118,6 +146,7 @@ export const ContactModal = ({
                 required
                 placeholder={t("namePlaceholder")}
                 disabled={isLoading}
+                aria-invalid={!!error}
               />
             </div>
             <div className={classes.formGroup}>
@@ -131,6 +160,7 @@ export const ContactModal = ({
                 required
                 placeholder={t("emailPlaceholder")}
                 disabled={isLoading}
+                aria-invalid={!!error}
               />
             </div>
           </div>
@@ -171,8 +201,9 @@ export const ContactModal = ({
               checked={formData.agreedToPrivacy}
               onChange={handleChange}
               required
+              aria-describedby="privacy-desc"
             />
-            <label htmlFor="privacy">
+            <label htmlFor="privacy" id="privacy-desc">
               {t("privacyAgreement.part1")}
               <Link
                 href="/privacy"
@@ -186,9 +217,15 @@ export const ContactModal = ({
             </label>
           </div>
 
-          {error && <div className={classes.error}>{error}</div>}
+          {error && (
+            <div className={classes.error} role="alert">
+              {error}
+            </div>
+          )}
           {success && (
-            <div className={classes.success}>{t("successMessage")}</div>
+            <div className={classes.success} role="status">
+              {t("successMessage")}
+            </div>
           )}
 
           <div className={classes.actions}>
