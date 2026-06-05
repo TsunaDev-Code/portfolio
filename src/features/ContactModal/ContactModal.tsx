@@ -12,6 +12,8 @@ interface ContactModalProps {
   submitBtnLabel?: string;
 }
 
+const SUCCESS_TIMEOUT_MS = 2500;
+
 export const ContactModal = ({
   isOpen,
   onClose,
@@ -22,6 +24,7 @@ export const ContactModal = ({
 
   const modalRef = useRef<HTMLDivElement>(null);
   const firstInputRef = useRef<HTMLInputElement>(null);
+  const triggerElementRef = useRef<HTMLElement | null>(null);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -37,17 +40,49 @@ export const ContactModal = ({
 
   useEffect(() => {
     if (isOpen) {
+      triggerElementRef.current = document.activeElement as HTMLElement;
       document.body.style.overflow = "hidden";
       firstInputRef.current?.focus();
 
       const handleEscape = (e: KeyboardEvent) => {
         if (e.key === "Escape") onClose();
       };
+      const handleTabKey = (e: KeyboardEvent) => {
+        if (e.key !== "Tab" || !modalRef.current) return;
+
+        const focusableElements = modalRef.current.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+        );
+        const firstElement = focusableElements[0] as HTMLElement;
+        const lastElement = focusableElements[
+          focusableElements.length - 1
+        ] as HTMLElement;
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+          }
+        }
+      };
+
       document.addEventListener("keydown", handleEscape);
+      document.addEventListener("keydown", handleTabKey);
 
       return () => {
+        // Очистка при закрытии или размонтировании
         document.body.style.overflow = "";
         document.removeEventListener("keydown", handleEscape);
+        document.removeEventListener("keydown", handleTabKey);
+
+        if (triggerElementRef.current) {
+          triggerElementRef.current.focus();
+        }
       };
     }
   }, [isOpen, onClose]);
@@ -56,13 +91,14 @@ export const ContactModal = ({
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, type } = e.target;
+
     const value =
-      type === "checkbox"
-        ? (e.target as HTMLInputElement).checked
+      e.target instanceof HTMLInputElement && type === "checkbox"
+        ? e.target.checked
         : e.target.value;
 
     setFormData((prev) => ({ ...prev, [name]: value }));
-    setError(null);
+    if (error) setError(null);
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -99,7 +135,7 @@ export const ContactModal = ({
       setTimeout(() => {
         onClose();
         setSuccess(false);
-      }, 2500);
+      }, SUCCESS_TIMEOUT_MS);
     } catch (err) {
       setError(err instanceof Error ? err.message : t("errorMessage"));
     } finally {
@@ -109,16 +145,18 @@ export const ContactModal = ({
 
   if (!isOpen) return null;
 
+  const hasError = !!error;
+
   return (
     <>
       <div className={classes.overlay} onClick={onClose} aria-hidden="true" />
-
       <div
         className={classes.modal}
         ref={modalRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
+        aria-describedby={hasError ? "form-error-message" : undefined}
       >
         <div className={classes.header}>
           <h2 id="modal-title">{t("title")}</h2>
@@ -127,6 +165,7 @@ export const ContactModal = ({
             onClick={onClose}
             aria-label={t("cancelBtn")}
             type="button"
+            disabled={isLoading}
           >
             ✕
           </button>
@@ -146,7 +185,7 @@ export const ContactModal = ({
                 required
                 placeholder={t("namePlaceholder")}
                 disabled={isLoading}
-                aria-invalid={!!error}
+                aria-invalid={hasError}
               />
             </div>
             <div className={classes.formGroup}>
@@ -160,7 +199,7 @@ export const ContactModal = ({
                 required
                 placeholder={t("emailPlaceholder")}
                 disabled={isLoading}
-                aria-invalid={!!error}
+                aria-invalid={hasError}
               />
             </div>
           </div>
@@ -201,6 +240,7 @@ export const ContactModal = ({
               checked={formData.agreedToPrivacy}
               onChange={handleChange}
               required
+              disabled={isLoading}
               aria-describedby="privacy-desc"
             />
             <label htmlFor="privacy" id="privacy-desc">
@@ -217,11 +257,12 @@ export const ContactModal = ({
             </label>
           </div>
 
-          {error && (
-            <div className={classes.error} role="alert">
+          {hasError && (
+            <div className={classes.error} role="alert" id="form-error-message">
               {error}
             </div>
           )}
+
           {success && (
             <div className={classes.success} role="status">
               {t("successMessage")}
