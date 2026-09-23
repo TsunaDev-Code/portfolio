@@ -45,6 +45,14 @@ export function createPageMetadata({
     title,
     description,
     keywords,
+    icons: {
+      icon: [
+        {
+          url: "/favicon.svg",
+          type: "image/svg+xml",
+        },
+      ],
+    },
     alternates: {
       canonical: currentUrl,
       languages,
