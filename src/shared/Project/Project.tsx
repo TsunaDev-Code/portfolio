@@ -35,6 +35,7 @@ export const Project = ({
           width={330}
           height={200}
           loading="lazy"
+          unoptimized
         />
       )}
       <div className={classes.content}>

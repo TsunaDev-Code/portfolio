@@ -53,6 +53,7 @@ export const AboutMe = async ({
           width={343}
           height={500}
           loading="lazy"
+          unoptimized
         />
         <Dots className={cn(classes.dotsImg, classes.leftDots)} />
         <Dots className={cn(classes.dotsImg, classes.rightDots)} />

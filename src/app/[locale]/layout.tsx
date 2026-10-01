@@ -4,7 +4,6 @@ import { mediaLinks } from "@/src/constants/media";
 import { Locale, locales } from "@/src/i18n/config";
 import { Media } from "@/src/shared/Media";
 import { Footer, Header } from "@/src/widget";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
@@ -41,7 +40,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   setRequestLocale(locale);
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale}>
@@ -52,7 +51,6 @@ export default async function LocaleLayout({ children, params }: Props) {
           <main className={classes.main}>{children}</main>
           <Footer />
         </NextIntlClientProvider>
-        <SpeedInsights />
       </body>
     </html>
   );

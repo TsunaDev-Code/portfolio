@@ -1,5 +1,6 @@
 import cn from "clsx";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { defaultLocale } from "../i18n/config";
 import { Fira_Code } from "next/font/google";
 import Link from "next/link";
 import { Button } from "../shared";
@@ -12,6 +13,7 @@ const firaCode = Fira_Code({
 });
 
 export default async function NotFound() {
+  setRequestLocale(defaultLocale);
   const t = await getTranslations("NotFound");
 
   return (
