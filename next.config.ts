@@ -3,9 +3,13 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin();
 
+const isExport = process.env.BEGET_BUILD === "true";
+
 const nextConfig: NextConfig = {
-  output: "export",
-  trailingSlash: true,
+  ...(isExport && {
+    output: "export",
+    trailingSlash: true,
+  }),
 
   images: {
     unoptimized: true,

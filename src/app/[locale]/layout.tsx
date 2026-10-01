@@ -45,7 +45,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body className={`${firaCode.variable} antialiased`}>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           <Media links={mediaLinks} direction="column" showLine={true} />
           <main className={classes.main}>{children}</main>
@@ -57,5 +57,5 @@ export default async function LocaleLayout({ children, params }: Props) {
 }
 
 export function generateStaticParams() {
-  return locales.map((locale: (typeof locales)[number]) => ({ locale }));
+  return locales.map((locale) => ({ locale }));
 }
